@@ -20,6 +20,7 @@ const num= event.target.innerText;
 const calcDisplay = document.getElementById('input-display');
 
 if(isNaN(num)){
+    // if the taget event text is true as not a number 
 if (num =='C'){
     calcDisplay.value= '';
 }
@@ -27,6 +28,7 @@ if(num == '<'){
     calcDisplay.value=calcDisplay.value.slice(0,-1); 
 }
 }else{
+    // when target event text is a number
     const previousNum = calcDisplay.value;
     const currentNum= previousNum + num;
     calcDisplay.value= currentNum;
@@ -34,6 +36,7 @@ if(num == '<'){
   
 })
 
+// condition of matching both of the pins
 function verifyPin(){
     const pin = document.getElementById('display-pin').value;
 const calcDisplay = document.getElementById('input-display').value;
